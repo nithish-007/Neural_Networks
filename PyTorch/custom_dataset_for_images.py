@@ -6,8 +6,7 @@ import cv2
 from torchvision.transforms import transforms
 import torch
 
-# from csv 
-#%%
+# from csv
 class CatsAndDogsDataset(Dataset):
     def __init__(self, csv_file, root_dir, transform):
         self.annotations = pd.read_csv(csv_file)
@@ -34,7 +33,6 @@ dataset = CatsAndDogsDataset(csv_file= "cats_dogs.csv",
 train_set, test_set = torch.utils.data.random_split(dataset, [20000, 5000])
 #data loader = .....
 
-#%%
 # from directory
 # after separate data into train and test each has cat and dog
 from typing import List, Tuple, Dict
